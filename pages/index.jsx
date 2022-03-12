@@ -1,5 +1,5 @@
-function HomePage() {
-  return <h1>The home page</h1>;
+const HomePage = ()=> {
+  return <h1>The home starting page</h1>;
 }
 
 export default HomePage;
