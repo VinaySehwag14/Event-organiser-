@@ -1,9 +1,16 @@
-const Events = () => {
-    return (
-        <h1>
-            Events page 
-        </h1>
-    );
-}
+import EventList from "../../components/events/EventList";
+import EventsSearch from "../../components/events/EventsSearch";
+import { getAllEvents } from "../../dummy-data";
 
-export default Events;
+const AllEventsPage = () => {
+  const events = getAllEvents();
+
+  return (
+    <>
+      <EventsSearch />
+      <EventList items={events} />
+    </>
+  );
+};
+
+export default AllEventsPage;
