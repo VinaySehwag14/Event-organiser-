@@ -1,6 +1,7 @@
 import style from "./logisticsItem.module.css";
 
-function LogisticsItem({ icon: Icon }) {
+const LogisticsItem = (props) => {
+  const { icon: Icon } = props;
   return (
     <li className={style.item}>
       <span className={style.icon}>
@@ -9,6 +10,6 @@ function LogisticsItem({ icon: Icon }) {
       <span className={style.content}>{props.children}</span>
     </li>
   );
-}
+};
 
 export default LogisticsItem;

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import AddressIcon from "../icons/addressIcon";
 import ArrowIcon from "../icons/arrowIcon";
 import DateIcon from "../icons/dateIcon";
@@ -7,7 +6,7 @@ import style from "./eventItem.module.css";
 
 const EventItem = ({ title, image, date, location, id }) => {
   //* changing date into more readable form
-  const ReadableDate = new Date(date).toLocaleDateString("en-US", {
+  const humanReadableDate = new Date(date).toLocaleDateString("en-US", {
     day: "numeric",
     month: "long",
     year: "numeric",
@@ -25,19 +24,19 @@ const EventItem = ({ title, image, date, location, id }) => {
       <div className={style.content}>
         <div className={style.summary}>
           <h2>{title}</h2>
-        </div>
-        <div className={style.date}>
-          <DateIcon />
-          <time>{ReadableDate}</time>
-        </div>
-        <div className={style.address}>
-          <AddressIcon />
-          <address>{formattedAddress}</address>
+          <div className={style.date}>
+            <DateIcon />
+            <time>{humanReadableDate}</time>
+          </div>
+          <div className={style.address}>
+            <AddressIcon />
+            <address>{formattedAddress}</address>
+          </div>
         </div>
         <div className={style.actions}>
           <Button link={link}>
             <span>Explore Event</span>
-            <span>
+            <span className={style.icon}>
               <ArrowIcon />
             </span>
           </Button>

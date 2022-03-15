@@ -1,4 +1,4 @@
-import style from "./error-alert.module.css";
+import style from "./errorAlert.module.css";
 
 const ErrorAlert = (props) => {
   return <div className={style.alert}>{props.children}</div>;
