@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { getFeaturedEvents } from "../helpers/api-util";
 import EventList from "../components/events/event-list";
+import NewsletterRegistration from "../components/input/NewsletterRegistration";
 
 function HomePage(props) {
   return (
@@ -8,6 +9,7 @@ function HomePage(props) {
       <Head>
         <title> Next Js</title>
       </Head>
+      <NewsletterRegistration />
       <EventList items={props.events} />
     </div>
   );
