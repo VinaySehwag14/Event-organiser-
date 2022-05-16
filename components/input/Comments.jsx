@@ -37,7 +37,7 @@ function Comments(props) {
   }
 
   return (
-    <section className={classes.comments}>
+    <section className={styles.comments}>
       <button onClick={toggleCommentsHandler}>
         {showComments ? "Hide" : "Show"} Comments
       </button>
